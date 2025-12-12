@@ -82,7 +82,7 @@ header {
 /* Grid Layout */
 .links-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 少しカード幅を調整 */
   gap: 1.5rem;
   padding-bottom: 4rem;
   animation: fadeInUp 1s ease-out;
@@ -103,6 +103,26 @@ header {
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  min-height: 160px; /* カードの高さをある程度揃える */
+}
+
+/* Icons */
+.card-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+/* Note icon specifically larger */
+.card-icon.note-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.link-card:hover .card-icon {
+  transform: scale(1.1);
 }
 
 .link-card h3 {
