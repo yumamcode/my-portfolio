@@ -79,13 +79,31 @@ header {
   margin-top: 0;
 }
 
+/* Section Groups */
+.section-group {
+  margin-top: 3rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
 /* Grid Layout */
 .links-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 少しカード幅を調整 */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   animation: fadeInUp 1s ease-out;
+}
+
+.sub-grid {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 
 /* Modern Cards */
@@ -103,7 +121,16 @@ header {
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
-  min-height: 160px; /* カードの高さをある程度揃える */
+  min-height: 160px;
+}
+
+.small-card {
+  padding: 1.5rem;
+  min-height: 120px;
+}
+
+.small-card h3 {
+  font-size: 1.1rem;
 }
 
 /* Icons */
@@ -170,6 +197,7 @@ footer {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   color: var(--text-muted);
   font-size: 0.875rem;
+  margin-top: 2rem;
 }
 
 /* Animations */
@@ -202,5 +230,8 @@ footer {
   }
   .links-grid {
     grid-template-columns: 1fr;
+  }
+  .sub-grid {
+    grid-template-columns: repeat(2, 1fr); /* スマホでも2列にする */
   }
 }
